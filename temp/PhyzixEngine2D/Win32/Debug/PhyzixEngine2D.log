@@ -1,0 +1,10 @@
+﻿  PhyzixEngine2DApp.cpp
+  main.cpp
+  _AABB.cpp
+  _Circle.cpp
+  _PhysicsObject.cpp
+  _PhysicsScene.cpp
+  _Plane.cpp
+  _RigidBody.cpp
+  Generating Code...
+LINK : fatal error LNK1104: cannot open file 'bootstrap.lib'

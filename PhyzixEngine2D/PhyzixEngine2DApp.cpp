@@ -22,24 +22,22 @@ bool PhyzixEngine2DApp::startup() {
 
 	m_2dRenderer = new aie::Renderer2D();
 
-	m_scene = new _PhysicsScene();
+	m_scene = new PhysicsScene();
 	m_scene->setTimeStep(0.01f);
 	m_scene->setGravity(glm::vec2(0.0f, -15.0f));
 
-	m_circle = new _Circle(glm::vec2(20.0f, 20.0f), glm::vec2(0.0f, 0.0f), 12, 1.0f, 0.0f, 1.0f, 3.0f, glm::vec4(1, 0, 0, 1));
-	m_circle2 = new _Circle(glm::vec2(20.0f, -20.0f), glm::vec2(0.0f, 0.0f), 12, 1.0f, 0.0f, 1.0f, 3.0f, glm::vec4(1, 0, 0, 1));
+	m_circle = new Circle(glm::vec2(20.0f, 20.0f), glm::vec2(0.0f, 0.0f), 12, 1.0f, 0.0f, 1.0f, 3.0f, glm::vec4(1, 0, 0, 1));
+	m_circle2 = new Circle(glm::vec2(20.0f, -20.0f), glm::vec2(0.0f, 0.0f), 12, 1.0f, 0.0f, 1.0f, 3.0f, glm::vec4(1, 0, 0, 1));
+	m_circle3 = new Circle(glm::vec2(-5.0f, -20.0f), glm::vec2(0.0f, 0.0f), 12, 1.0f, 0.0f, 1.0f, 3.0f, glm::vec4(1, 0, 0, 1));
 
-	m_circle3 = new _Circle(glm::vec2(-5.0f, -20.0f), glm::vec2(0.0f, 0.0f), 12, 1.0f, 0.0f, 1.0f, 3.0f, glm::vec4(1, 0, 0, 1));
+	m_square3 = new AABB(glm::vec2(20.0f, -30.0f), glm::vec2(5.0f, 5.0f), glm::vec2(0.0f, 0.0f), 0.0f, 0.0f, 1.0f, glm::vec4(0, 1, 1, 1));
+	m_square = new AABB(glm::vec2(-20.0f, 20.0f), glm::vec2(5.0f, 5.0f), glm::vec2(0.0f, 0.0f), 0.0f, 0.0f, 1.0f, glm::vec4(0, 1, 1, 1));
+	m_square2 = new AABB(glm::vec2(-20.0f, -20.0f), glm::vec2(5.0f, 5.0f), glm::vec2(0.0f, 0.0f), 0.0f, 0.0f, 1.0f, glm::vec4(0, 1, 1, 1));
 
-	m_square3 = new _AABB(glm::vec2(20.0f, -30.0f), glm::vec2(5.0f, 5.0f), glm::vec2(0.0f, 0.0f), 0.0f, 0.0f, 1.0f, glm::vec4(0, 1, 1, 1));
-	m_square = new _AABB(glm::vec2(-20.0f, 20.0f), glm::vec2(5.0f, 5.0f), glm::vec2(0.0f, 0.0f), 0.0f, 0.0f, 1.0f, glm::vec4(0, 1, 1, 1));
-	m_square2 = new _AABB(glm::vec2(-20.0f, -20.0f), glm::vec2(5.0f, 5.0f), glm::vec2(0.0f, 0.0f), 0.0f, 0.0f, 1.0f, glm::vec4(0, 1, 1, 1));
-
-	m_plane = new _Plane(glm::normalize(glm::vec2(0, -1)), -40.0f, glm::vec4(0, 0, 1, 1));
-	m_plane2 = new _Plane(glm::normalize(glm::vec2(1, -1)), -60.0f, glm::vec4(0, 1, 0, 1));
-
-	m_plane3 = new _Plane(glm::normalize(glm::vec2(0, 1)), -40.0f, glm::vec4(0, 0, 1, 1));
-    m_plane4 = new _Plane(glm::normalize(glm::vec2(-1, 1)), -60.0f, glm::vec4(0, 1, 0, 1));
+	m_plane = new Plane(glm::normalize(glm::vec2(0, -1)), -40.0f, glm::vec4(0, 0, 1, 1));
+	m_plane2 = new Plane(glm::normalize(glm::vec2(1, -1)), -60.0f, glm::vec4(0, 1, 0, 1));
+	m_plane3 = new Plane(glm::normalize(glm::vec2(0, 1)), -40.0f, glm::vec4(0, 0, 1, 1));
+    m_plane4 = new Plane(glm::normalize(glm::vec2(-1, 1)), -60.0f, glm::vec4(0, 1, 0, 1));
 
 	m_circle->setElasticity(0.9f);
 	m_circle->setKinematic(false);
@@ -62,16 +60,17 @@ bool PhyzixEngine2DApp::startup() {
 	m_scene->addActor(m_square);
 	m_scene->addActor(m_square2);
 	m_scene->addActor(m_square3);
+
 	m_scene->addActor(m_circle3);
 	m_scene->addActor(m_circle);
 	m_scene->addActor(m_circle2);
+
 	m_scene->addActor(m_plane);
 	m_scene->addActor(m_plane2);
 	m_scene->addActor(m_plane3);
 	m_scene->addActor(m_plane4);
 
 	m_square3->applyForce(glm::vec2(0.0f, 20.0f));
-	//m_circle->applyForce(glm::vec2(-50.0f, -50.0f));
 
 	// TODO: remember to change this when redistributing a build!
 	// the following path would be used instead: "./font/consolas.ttf"

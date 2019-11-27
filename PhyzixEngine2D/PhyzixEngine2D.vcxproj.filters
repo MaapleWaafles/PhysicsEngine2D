@@ -24,22 +24,22 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="_AABB.cpp">
+    <ClCompile Include="Circle.cpp">
       <Filter>Header Files\PhysicsLib</Filter>
     </ClCompile>
-    <ClCompile Include="_Circle.cpp">
+    <ClCompile Include="AABB.cpp">
       <Filter>Header Files\PhysicsLib</Filter>
     </ClCompile>
-    <ClCompile Include="_PhysicsObject.cpp">
+    <ClCompile Include="RigidBody.cpp">
       <Filter>Header Files\PhysicsLib</Filter>
     </ClCompile>
-    <ClCompile Include="_PhysicsScene.cpp">
+    <ClCompile Include="Plane.cpp">
       <Filter>Header Files\PhysicsLib</Filter>
     </ClCompile>
-    <ClCompile Include="_Plane.cpp">
+    <ClCompile Include="PhysicsScene.cpp">
       <Filter>Header Files\PhysicsLib</Filter>
     </ClCompile>
-    <ClCompile Include="_RigidBody.cpp">
+    <ClCompile Include="PhysicsObject.cpp">
       <Filter>Header Files\PhysicsLib</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,22 +47,22 @@
     <ClInclude Include="PhyzixEngine2DApp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="_Plane.h">
+    <ClInclude Include="Circle.h">
       <Filter>Header Files\PhysicsLib</Filter>
     </ClInclude>
-    <ClInclude Include="_Circle.h">
+    <ClInclude Include="AABB.h">
       <Filter>Header Files\PhysicsLib</Filter>
     </ClInclude>
-    <ClInclude Include="_RigidBody.h">
+    <ClInclude Include="RigidBody.h">
       <Filter>Header Files\PhysicsLib</Filter>
     </ClInclude>
-    <ClInclude Include="_PhysicsScene.h">
+    <ClInclude Include="Plane.h">
       <Filter>Header Files\PhysicsLib</Filter>
     </ClInclude>
-    <ClInclude Include="_PhysicsObject.h">
+    <ClInclude Include="PhysicsScene.h">
       <Filter>Header Files\PhysicsLib</Filter>
     </ClInclude>
-    <ClInclude Include="_AABB.h">
+    <ClInclude Include="PhysicsObject.h">
       <Filter>Header Files\PhysicsLib</Filter>
     </ClInclude>
   </ItemGroup>

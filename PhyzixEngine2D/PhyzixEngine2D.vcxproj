@@ -164,21 +164,21 @@
   <ItemGroup>
     <ClCompile Include="PhyzixEngine2DApp.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="_AABB.cpp" />
-    <ClCompile Include="_Circle.cpp" />
-    <ClCompile Include="_PhysicsObject.cpp" />
-    <ClCompile Include="_PhysicsScene.cpp" />
-    <ClCompile Include="_Plane.cpp" />
-    <ClCompile Include="_RigidBody.cpp" />
+    <ClCompile Include="AABB.cpp" />
+    <ClCompile Include="Circle.cpp" />
+    <ClCompile Include="PhysicsObject.cpp" />
+    <ClCompile Include="PhysicsScene.cpp" />
+    <ClCompile Include="Plane.cpp" />
+    <ClCompile Include="RigidBody.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PhyzixEngine2DApp.h" />
-    <ClInclude Include="_AABB.h" />
-    <ClInclude Include="_Circle.h" />
-    <ClInclude Include="_PhysicsObject.h" />
-    <ClInclude Include="_PhysicsScene.h" />
-    <ClInclude Include="_Plane.h" />
-    <ClInclude Include="_RigidBody.h" />
+    <ClInclude Include="AABB.h" />
+    <ClInclude Include="Circle.h" />
+    <ClInclude Include="PhysicsObject.h" />
+    <ClInclude Include="PhysicsScene.h" />
+    <ClInclude Include="Plane.h" />
+    <ClInclude Include="RigidBody.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
